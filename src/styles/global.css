@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'GT America';
+        font-style: normal;
+        font-weight: 400;
+        font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
+        src: url('/fonts/GT-America-regular.ttf') format('ttf');
+    }
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    /*padding: 1rem;*/
+}
+
+/* reset link styles */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Improve Page speed */
+/* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+img {
+    content-visibility: auto;
+}
